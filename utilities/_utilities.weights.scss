@@ -1,0 +1,18 @@
+/* ==========================================================================
+   #WEIGHTS
+   ========================================================================== */
+
+/**
+ * Utility classes to easily add weight to text:
+ *
+ *   <p class="u-900">I'm the heaviest out there</p>
+ *
+ */
+
+$inuit-weights: 100 200 300 400 500 600 700 800 900 !default;
+
+@each $inuit-weight in $inuit-weights {
+    .u-#{$inuit-weight} {
+        font-weight: $inuit-weight !important;
+    }
+}
