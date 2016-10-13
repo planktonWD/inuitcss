@@ -1,0 +1,20 @@
+/* ==========================================================================
+   #BACKGROUNDS
+   ========================================================================== */
+
+/**
+ * Utility classes to easily apply background color to elements:
+ *
+ *   <div class="u-bg-white"></div>
+ *
+ */
+
+$inuit-backgrounds: (
+  "transparent": transparent,
+) !default;
+
+@each $inuit-background-name, $inuit-background-value in $inuit-backgrounds {
+  .u-bg-#{$inuit-background-name} {
+    background-color: $inuit-background-value !important;
+  }
+}
