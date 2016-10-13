@@ -1,0 +1,43 @@
+/* ==========================================================================
+   #GUTTER
+   ========================================================================== */
+
+/**
+ * A gutter can be used to create a buffer between our page and the edge of
+ * an element or viewport.
+ *
+ * 1. Ensures the gutter does not eat into any wrapper width.
+ */
+
+.o-gutter {
+    box-sizing: content-box; /* [1] */
+    padding-right: $inuit-global-spacing-unit;
+    padding-left: $inuit-global-spacing-unit;
+}
+
+
+
+
+
+/* Size variants.
+   ========================================================================== */
+
+.o-gutter--tiny {
+    padding-right: $inuit-global-spacing-unit-tiny;
+    padding-left: $inuit-global-spacing-unit-tiny;
+}
+
+.o-gutter--small {
+    padding-right: $inuit-global-spacing-unit-small;
+    padding-left: $inuit-global-spacing-unit-small;
+}
+
+.o-gutter--large {
+    padding-right: $inuit-global-spacing-unit-large;
+    padding-left: $inuit-global-spacing-unit-large;
+}
+
+.o-gutter--huge {
+    padding-right: $inuit-global-spacing-unit-huge;
+    padding-left: $inuit-global-spacing-unit-huge;
+}

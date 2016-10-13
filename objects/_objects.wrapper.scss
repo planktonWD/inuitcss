@@ -1,0 +1,38 @@
+/* ==========================================================================
+   #WRAPPER
+   ========================================================================== */
+
+/**
+ * Page-level constraining and wrapping elements.
+ *
+ * 1. Ensures no padding from other elements eat into our wrapper widths.
+ */
+
+$inuit-wrappers: (
+    default: 1000px,
+    narrow:  600px,
+) !default;
+
+.o-wrapper {
+    max-width: map-get($inuit-wrappers, default);
+    box-sizing: content-box; /* [1] */
+    margin-right: auto;
+    margin-left: auto;
+
+    @include inuit-clearfix();
+}
+
+
+
+
+
+/* Size variants.
+   ========================================================================== */
+
+@each $inuit-wrapper-name, $inuit-wrapper-value in $inuit-wrappers {
+    @if ($inuit-wrapper-name != default) {
+        .o-wrapper--#{$inuit-wrapper-name} {
+            max-width: $inuit-wrapper-value;
+        }
+    }
+}
