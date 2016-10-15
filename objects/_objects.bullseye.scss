@@ -1,0 +1,14 @@
+/* ==========================================================================
+   #BULLSEYE
+   ========================================================================== */
+
+/**
+ * A simple object to vertically and horizontally center an element in the
+ * middle of its container.
+ */
+
+.o-bullseye {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
