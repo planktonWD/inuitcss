@@ -1,0 +1,50 @@
+/* ==========================================================================
+   #COLUMNS
+   ========================================================================== */
+
+/**
+ * A CSS3 implementation of the popular print layout.
+ */
+
+.o-columns {
+    column-count: 2;
+    column-gap: $inuit-global-spacing-unit;
+}
+
+
+
+
+
+/* Size variants
+   ========================================================================== */
+
+.o-columns--tiny {
+  column-gap: $inuit-global-spacing-unit-tiny;
+}
+
+.o-columns--small {
+  column-gap: $inuit-global-spacing-unit-small;
+}
+
+.o-columns--large {
+  column-gap: $inuit-global-spacing-unit-large;
+}
+
+.o-columns--huge {
+  column-gap: $inuit-global-spacing-unit-huge;
+}
+
+
+
+
+
+/* Column variants
+   ========================================================================== */
+
+$inuit-columns: 3 !default;
+
+@each $inuit-column in $inuit-columns {
+    .o-columns--#{$inuit-column} {
+        column-count: $inuit-column;
+    }
+}
