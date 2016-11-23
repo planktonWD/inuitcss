@@ -1,0 +1,57 @@
+/* ==========================================================================
+   #SPACING
+   ========================================================================== */
+
+/**
+ * Utility classes to put specific spacing values onto elements. The below loop
+ * will generate us a suite of classes like:
+ *
+ *   .u-mt {}
+ *   .u-pl+ {}
+ *   .u-mr- {}
+ *   .u-p {}
+ *   .u-pr0 {}
+ */
+
+/* stylelint-disable string-quotes */
+
+$inuit-spacing-directions: (
+  null: null,
+  '-top': 't',
+  '-right': 'r',
+  '-bottom': 'b',
+  '-left': 'l',
+);
+
+$inuit-spacing-properties: (
+  'padding': 'p',
+  'margin': 'm'
+);
+
+$inuit-spacing-sizes: (
+  null: $inuit-global-spacing-unit,
+  '--': $inuit-global-spacing-unit-tiny,
+  '-': $inuit-global-spacing-unit-small,
+  \+: $inuit-global-spacing-unit-large,
+  \+\+: $inuit-global-spacing-unit-huge,
+  '0': 0
+) !default;
+
+
+@each $property, $property-namespace in $inuit-spacing-properties {
+
+  @each $direction, $direction-namespace in $inuit-spacing-directions {
+
+    @each $size, $value in $inuit-spacing-sizes {
+
+      .u-#{$property-namespace}#{$direction-namespace}#{$size} {
+        #{$property}#{$direction}: $value !important;
+      }
+
+    }
+
+  }
+
+}
+
+/* stylelint-enable string-quotes */
